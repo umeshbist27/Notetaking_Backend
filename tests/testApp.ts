@@ -1,0 +1,15 @@
+
+import express from 'express';
+import errorHandler from '../middleware/errorHandler';
+import authRoutes from "../routes/authRoute"
+import noteRoutes from "../routes/noteRoute"
+
+const testApp = express();
+
+
+testApp.use(express.json());
+testApp.use('/api/auth', authRoutes);
+testApp.use("/api/auth/notes", noteRoutes);
+testApp.use(errorHandler);
+
+export default testApp;

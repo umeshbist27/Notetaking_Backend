@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-test-data:/data/db
+
+  backend-test:
+    build: .
+    command: npm test
+    env_file:
+      - ./.env
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-test-data:

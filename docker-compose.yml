@@ -1,0 +1,21 @@
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.env
+    depends_on:
+      - mongo   
+
+volumes:
+  mongo-data:

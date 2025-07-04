@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+     "types": ["node", "jest"],  
+    "strict": true,
+    "skipLibCheck": true,
+    "rootDir": "./"
+  },
+  "include": ["**/*.ts","tests/**/*.ts"]
+}
