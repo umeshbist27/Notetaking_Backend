@@ -38,8 +38,8 @@ mongoose
     process.exit(1);
   });
 
-app.use("/api/auth/notes", router);
-app.use("/api/auth/notes", noteRoutes);
+app.use("/api/auth", router);
+app.use("/api/notes", noteRoutes);
 
 app.use(errorHandler);
 

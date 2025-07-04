@@ -30,8 +30,8 @@ mongoose
     console.error("✗ Database connection error:", err);
     process.exit(1);
 });
-app.use("/api/auth/notes", router);
-app.use("/api/auth/notes", noteRoutes);
+app.use("/api/auth", router);
+app.use("/api/notes", noteRoutes);
 app.use(errorHandler);
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
