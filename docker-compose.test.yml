@@ -12,7 +12,7 @@ services:
     build: .
     command: npm test
     env_file:
-      - ./.env
+      - .env
     depends_on:
       - mongo
 
