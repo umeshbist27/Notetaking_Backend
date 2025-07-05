@@ -7,7 +7,7 @@ RUN npm install -g typescript
 
 COPY . .
 
-RUN npm run build
+RUN npm run build && npx tsc --noEmit
 
 
 EXPOSE 3000
